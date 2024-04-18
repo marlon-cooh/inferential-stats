@@ -1,9 +1,10 @@
-## **Inferential Stats**
+## **Inferential Statistics**
 
 ### Author: **Marlon Marin**
 
 ### Description: 
-Herein, we will learn how to process and treat data with missing values.
+Use of hypothesis tests and conduct some inferential stats algorithms are relevant for further DS and ML projects,
+here I condense two practices and useful code to glide over this subject.
 
 ## Requirements
 
