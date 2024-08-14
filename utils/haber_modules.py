@@ -1,8 +1,13 @@
 import numpy as np
 
 def flow_rate(u, c, area):
-    # Returns flow rate based on initial reagent concentration, velocity flow, and reactor area
-    # Area is the parameter to iterate for this analysis.
+    
+    """Returns flow rate based on:
+            * initial reagent concentration (c), 
+            * velocity flow (u), and 
+            * reactor area (area)
+       Area is the parameter to iterate for this analysis.
+    """
     return (u * c * area)
 
 def mass_balance(area_r, r_ammonia, eta, u, c_0):
@@ -69,7 +74,7 @@ def equilibrium_constant(T_exp):
     k_eq_std = np.exp((-delta_gibbs_std*1000) / (T*R)) # Equilibria constant at SATP
 
     # Equilibria constant based on Van't Hoff equation
-    v_hoff = (-1000*delta_H_std / R) * ((1/T) - (1/T_exp))
+    v_hoff = (1000*delta_H_std / R) * ((1/T) - (1/T_exp))
     k_eq = k_eq_std * np.exp(v_hoff)
     return k_eq
 
